@@ -10,7 +10,6 @@
       </h1>
       <p class="lead">{{ site.description }}</p>
     </div>
-     <img src="https://github.com/leandroroser/leandroroser.github.io/blob/master/public/logos.png?raw=true" alt="html image" style="width:200px;height:150px;">
 
     <nav class="sidebar-nav">
       <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}">Home</a>
@@ -30,6 +29,7 @@
       {% endfor %}
       
       <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a>
+      <img src="https://github.com/leandroroser/leandroroser.github.io/blob/master/public/logos.png?raw=true" alt="html image" style="width:200px;height:150px;">
       <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
     </nav>
 
