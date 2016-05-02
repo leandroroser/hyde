@@ -17,8 +17,12 @@ Requirements:
 ## Installing Ubuntu
 1. Create a bootable image of Ubuntu 16.04 in Windows with Rufus (https://rufus.akeo.ie/) or in Ubuntu with the  
 Startup Disk Creator in Ubuntu.
-2. As the machine has a 64 bits architecture but the UEFI is of 32 bits (!), the file bootia32.efi (here is a copy) 
-must be included in the folder /boot/EFI
+2. As the machine has a 64 bits architecture but the UEFI is of 32 bits (!), the file bootia32.efi. A copy can be obtained with
+ 
+```{bash}
+   git clone https://github.com/leandroroser/leandroroser.github.io/blob/master/public/bootia32.efi
+```
+The file must be included in the folder /EFI/BOOT
 3. Disable the "Secure Boot" option into the UEFI menu.  
 4. Boot into the Live Sesion from the USB stick and install Ubuntu. I have partitioned the disk as follows: 100 mb for /boot (EFI), 20 Gb for root (Ext4)
 1 Gb for swap and the rest for /home (Ext4). Reboot.
@@ -36,10 +40,11 @@ medium plugged in and hit "c" when the menu appears, starting a grub shell.
 And press tab. A list of devices must appear in the screen. Take note of the UUID number of the root partition, usually hd1,gpt2 (you will recognize it for the Ext file system).
 8. Now type:
 9. 
+
 ```{bash}
-    linux (hd1,gpt2)/boot/vmlinuz-4.4.0-21-generic.efi.signed root=UUID=YOUR_NUMBER_OF_UUID reboot=pci,force
-    initrd (hd1,gpt2)/boot/initrd-3.18.0-9-generic
-    boot
+   linux (hd1,gpt2)/boot/vmlinuz-4.4.0-21-generic.efi.signed root=UUID=YOUR_NUMBER_OF_UUID reboot=pci,force
+   initrd (hd1,gpt2)/boot/initrd-3.18.0-9-generic
+   boot
 ```
 9. At this time, if you have writed correctly the code above (is usual to make a typo) the system must boot.
 
@@ -48,9 +53,9 @@ And press tab. A list of devices must appear in the screen. Take note of the UUI
 11. Update the repositories and install git
 
 ```{bash}
-    sudo apt-get update
-    sudo apt-get install grub-efi-ia32-bin
-    sudo update-grub
+   sudo apt-get update
+   sudo apt-get install grub-efi-ia32-bin
+   sudo update-grub
 ```
 
 If you got problems to install the grub, you can download a version in https://launchpad.net/ubuntu/xenial/amd64/grub-efi-ia32-bin/2.02~beta2-36ubuntu3
@@ -59,45 +64,45 @@ If you got problems to install the grub, you can download a version in https://l
 ## Installing the wifi driver
 
   ```{bash}
-  sudo apt-get install git
-  git clone https://github.com/hadess/rtl8723bs
-  cd rtl8723bs
-  sudo make
-  sudo make install
-  depmod -a
-  modprobe r8723bs
-  ```
+   sudo apt-get install git
+   git clone https://github.com/hadess/rtl8723bs
+   cd rtl8723bs
+   sudo make
+   sudo make install
+   depmod -a
+   modprobe r8723bs
+   ```
   
 ## Upgrade the system and correct the freezing problem
 First upgrade the system
 
 ```{bash}
-    sudo apt-get upgrade
+   sudo apt-get upgrade
 ```
 
 The system tends to freezes ocasionally. To correct this problem, a solution that work for my was changing a line
 in the grub file. Type in the console:
 
 ```{bash}
-    sudo nano /etc/default/grub
+   sudo nano /etc/default/grub
 ```
 
 And change the line:
 
 ```
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+   GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
 ```
 
 to
 
 ```
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash intel_idle.max_cstate=1"
+   GRUB_CMDLINE_LINUX_DEFAULT="quiet splash intel_idle.max_cstate=1"
 ```
 
 Update the grub and reboot:
 ```{bash}
-  sudo update-grub
-  sudo reboot
+   sudo update-grub
+   sudo reboot
 ```
 ---------------------------
 
