@@ -17,7 +17,7 @@ Requirements:
 ## Installing Ubuntu
 1. Create a bootable image of Ubuntu 16.04 in Windows with Rufus (https://rufus.akeo.ie/) or in Ubuntu with the  
 Startup Disk Creator in Ubuntu.
-2. As the machine has a 64 bits architecture but the UEFI is of 32 bits (!), the file bootia32.efi. A copy can be obtained with
+2. As the machine has a 64 bits architecture but the UEFI is of 32 bits (!), the file bootia32.efi. A copy can be obtained from the command line with:
  
 ```{bash}
    git clone https://github.com/leandroroser/leandroroser.github.io/blob/master/public/bootia32.efi
