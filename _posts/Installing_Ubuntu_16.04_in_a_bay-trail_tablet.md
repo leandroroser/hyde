@@ -35,7 +35,7 @@ medium plugged in and hit "c" when the menu appears, starting a grub shell.
 ```{bash}
    linux (hd1,
 ```
-And press tab. A list of devices must appear in the screen. Take note of the UUID number of the root partition, usually hd1,gpt2 (you will recognize it for the Ext file system).
+And press tab. A list of devices must appear in the screen. Take note of the UUID number of the root partition, usually hd1,gpt2 (you will recognize it for the Ext file system).  
 -8- Now type:  
 
 ```{bash}
