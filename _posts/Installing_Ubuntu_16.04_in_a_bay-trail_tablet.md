@@ -31,6 +31,7 @@ medium plugged in and hit "c" when the menu appears, starting a grub shell.
 6. Probably the keyboard will type some numbers instead of letters for the half of the keys. This is dissabled by pressing 
 "Fn + Ins".
 7. Type:
+
 ```{bash}
    linux (hd1,
 ```
@@ -85,13 +86,13 @@ in the grub file. Type in the console:
 
 And change the line:
 
-```{bash}
+```
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
 ```
 
 to
 
-```{bash}
+```
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash intel_idle.max_cstate=1"
 ```
 
