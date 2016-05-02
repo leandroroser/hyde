@@ -74,7 +74,7 @@ depmod -a
 modprobe r8723bs
 ```
   
-## Upgrade the system and correct the freezing problem
+## Upgrading the system and correcting the freezing problem
 First upgrade the system  
 
 ```{bash}
