@@ -36,7 +36,7 @@ medium plugged in and hit "c" when the menu appears, starting a grub shell.
 ```{bash}
  linux (hd1,
 ```
-And press tab. A list of devices must appear in the screen. Take note of the UUID number of the root partition, usually hd1,gpt2 (you will recognize it for the Ext file system).  
+And press tab. A list of devices must appear in the screen. Take note of the UUID number of the root partition, (usually the hd1,gpt2 partition; you will recognize it for the Ext file system).  
 -8- Now type:  
 
 ```{bash}
@@ -57,8 +57,8 @@ And press tab. A list of devices must appear in the screen. Take note of the UUI
  sudo update-grub
 ```
 
-If you got problems to install the grub, you can download a version in [](https://launchpad.net/ubuntu/xenial/amd64/grub-efi-ia32-bin/2.02~beta2-36ubuntu3)
-Click on the downloaded file and install (or via ```sudo dpkg -i PATH_TO_THE_FILE```), and then type ```sudo update-grub```, and hit enter.
+If you got problems to install the grub, you can download a version  [here](https://launchpad.net/ubuntu/xenial/amd64/grub-efi-ia32-bin/2.02~beta2-36ubuntu3)
+Install the file via ```sudo dpkg -i PATH_TO_THE_FILE```, then type ```sudo update-grub```, and hit enter.
   
   
 ## Installing the wifi driver  
