@@ -10,7 +10,7 @@ poor driver support. The best solution comes with the new release of Ubuntu, and
 
 * An USB storage medium  
 * An Ubuntu 16.04 image  
-* An ethernet connection. I used my cell phone connected to the tablet via USB to have internet access  
+*  A wired internet connection to accessing the web via USB. I plugged a cable into my cell phone and use it to have internet access.
 * Patience  
 
 ## Installing Ubuntu
