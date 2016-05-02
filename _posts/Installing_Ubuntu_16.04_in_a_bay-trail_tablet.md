@@ -37,7 +37,6 @@ medium plugged in and hit "c" when the menu appears, starting a grub shell.
 ```
 And press tab. A list of devices must appear in the screen. Take note of the UUID number of the root partition, usually hd1,gpt2 (you will recognize it for the Ext file system).
 8. Now type:
-9. 
 
 ```{bash}
    linux (hd1,gpt2)/boot/vmlinuz-4.4.0-21-generic.efi.signed root=UUID=YOUR_NUMBER_OF_UUID reboot=pci,force
