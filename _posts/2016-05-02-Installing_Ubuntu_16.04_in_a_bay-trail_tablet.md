@@ -60,15 +60,15 @@ If you got problems to install the grub, you can download a version in https://l
 
 ## Installing the wifi driver
 
-  ```{bash}
-   sudo apt-get install git
-   git clone https://github.com/hadess/rtl8723bs
-   cd rtl8723bs
-   sudo make
-   sudo make install
-   depmod -a
-   modprobe r8723bs
-   ```
+```{bash}
+sudo apt-get install git
+git clone https://github.com/hadess/rtl8723bs
+cd rtl8723bs
+sudo make
+sudo make install
+depmod -a
+modprobe r8723bs
+```
   
 ## Upgrade the system and correct the freezing problem
 First upgrade the system
