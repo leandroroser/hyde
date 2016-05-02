@@ -56,9 +56,9 @@ And press tab. A list of devices must appear in the screen. Take note of the UUI
 ```
 
 If you got problems to install the grub, you can download a version in https://launchpad.net/ubuntu/xenial/amd64/grub-efi-ia32-bin/2.02~beta2-36ubuntu3
-  Click on the downloaded file and install (or via sudo deb -i PATH_TO_THE_FILE), and then type "sudo update-grub" and enter.
+  Click on the downloaded file and install (or via sudo dpkg -i PATH_TO_THE_FILE), and then type "sudo update-grub" and enter.
 
-## Installing the wifi driver
+## Installing the wifi driver  
 
 ```{bash}
 sudo apt-get install git
