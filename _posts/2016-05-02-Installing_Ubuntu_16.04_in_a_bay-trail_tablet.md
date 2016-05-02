@@ -42,7 +42,7 @@ And press tab. A list of devices must appear in the screen. Take note of the UUI
 
 ```{bash}
  linux (hd1,gpt2)/boot/vmlinuz-4.4.0-21-generic.efi.signed root=UUID=YOUR_NUMBER_OF_UUID reboot=pci,force
- initrd (hd1,gpt2)/boot/initrd-3.18.0-9-generic
+ initrd (hd1,gpt2)/boot/initrd-4.4.0-21-generic
  boot
 ```
 -9- At this time, if you have writed correctly the code above (is usual to make a typo) the system must boot.  
