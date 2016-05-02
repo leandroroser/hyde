@@ -1,4 +1,7 @@
-# Installing Ubuntu 16.04 in a bay-trail tablet
+---
+layout: 
+title: Installing Ubuntu 16.04 in a bay-trail tablet
+---
 
 A month ago I have bought a cheap 2 in 1 tablet that can be obtained here in Argentina. It has a processor Intel Atom CPU Z3735F, 
 2Gb of RAM memory, 32 Gb of hard-disk, and comes preinstalled with Windows 10.1. My objective was to install a GNU-Linux 
