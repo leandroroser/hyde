@@ -13,41 +13,41 @@ Requirements:
 * Patience
 
 ## Installing Ubuntu
-1. Create a bootable image of Ubuntu 16.04 in Windows with Rufus (https://rufus.akeo.ie/) or with the  
+1- Create a bootable image of Ubuntu 16.04 in Windows with Rufus (https://rufus.akeo.ie/) or with the  
 Startup Disk Creator in Ubuntu.
-2. As the machine has a 64-bits architecture but a 32-bits UEFI (!), a trick must be made. A copy of the 32-bit loader *bootia32.efi* can be obtained from the command line with:
+2- As the machine has a 64-bits architecture but a 32-bits UEFI (!), a trick must be made. A copy of the 32-bit loader *bootia32.efi* can be obtained from the command line with:
  
 ```{bash}
    git clone https://github.com/leandroroser/leandroroser.github.io/blob/master/public/bootia32.efi
 ```
 
 The file must be included in the folder /EFI/BOOT  
-3. Turn on the tablet and disable the "Secure Boot" option into the UEFI menu (without inserting the usb stick yet) and reboot.  
-4. Insert the usb stick and turn on the tablet. The Ubuntu menu will appear. Boot into the Live Sesion and install Ubuntu. I have partitioned the disk as follows: 100 mb for /boot (EFI), 20 Gb for root (Ext4), 1 Gb for swap and the rest for /home (Ext4). Reboot.
+3- Turn on the tablet and disable the "Secure Boot" option into the UEFI menu (without inserting the usb stick yet) and reboot.  
+4- Insert the usb stick and turn on the tablet. The Ubuntu menu will appear. Boot into the Live Sesion and install Ubuntu. I have partitioned the disk as follows: 100 mb for /boot (EFI), 20 Gb for root (Ext4), 1 Gb for swap and the rest for /home (Ext4). Reboot.
 
 ## First boot
-5. The first time the machine is not able to boot directly into the installed system. Boot the machine with the USB storage 
+5- The first time the machine is not able to boot directly into the installed system. Boot the machine with the USB storage 
 medium plugged in and hit "c" when the menu appears, starting a grub shell. 
-6. Probably the keyboard will type some numbers instead of letters for the half of the keys. This is dissabled by pressing 
+6- Probably the keyboard will type some numbers instead of letters for the half of the keys. This is dissabled by pressing 
 "Fn + Ins".
-7. Type:
+7- Type:
 
 ```{bash}
    linux (hd1,
 ```
 And press tab. A list of devices must appear in the screen. Take note of the UUID number of the root partition, usually hd1,gpt2 (you will recognize it for the Ext file system).
-8. Now type:
+8- Now type:
 
 ```{bash}
    linux (hd1,gpt2)/boot/vmlinuz-4.4.0-21-generic.efi.signed root=UUID=YOUR_NUMBER_OF_UUID reboot=pci,force
    initrd (hd1,gpt2)/boot/initrd-3.18.0-9-generic
    boot
 ```
-9. At this time, if you have writed correctly the code above (is usual to make a typo) the system must boot.
+9- At this time, if you have writed correctly the code above (is usual to make a typo) the system must boot.
 
 ## Installing the 32-bit Grub
-10. Connect the machine to an ethernet connection. I used my cell phone and works fine. 
-11. Update the repositories and install git
+10- Connect the machine to an ethernet connection. I used my cell phone and works fine. 
+11- Update the repositories and install git
 
 ```{bash}
    sudo apt-get update
