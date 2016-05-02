@@ -7,11 +7,10 @@ A month ago I have bought an Exo W1025  "2 in 1" tablet, that can be obtained he
 poor driver support. The best solution comes with the new release of Ubuntu, and althought some characteristics are not working, it is still "usable". The following steps gave me the best result. At the moment there is no support for the screen in touch mode, the screen rotation and the sound; the power settings also have problems, because the machine do not charge when it is on and is not detecting the actual battery charge level.
 
 Requirements:
-* An USB storage medium
-* An Ubuntu 16.04 image
-* An ethernet connection. I used my cell phone connected to the tablet via USB to have internet access.
+* An USB storage medium  
+* An Ubuntu 16.04 image  
+* An ethernet connection. I used my cell phone connected to the tablet via USB to have internet access  
 * Patience  
-  
 
 ## Installing Ubuntu
 -1- Create a bootable image of Ubuntu 16.04 in Windows with Rufus (https://rufus.akeo.ie/) or with the  
