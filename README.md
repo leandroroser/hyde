@@ -1,2 +1,1 @@
-
-## [](http://leandroroser.github.io)
+## [-> The blog is here <-](http://leandroroser.github.io)
