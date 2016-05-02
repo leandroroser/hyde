@@ -10,7 +10,8 @@ Requirements:
 * An USB storage medium
 * An Ubuntu 16.04 image
 * An ethernet connection. I used my cell phone connected to the tablet via USB to have internet access.
-* Patience
+* Patience  
+  
 
 ## Installing Ubuntu
 -1- Create a bootable image of Ubuntu 16.04 in Windows with Rufus (https://rufus.akeo.ie/) or with the  
@@ -24,7 +25,8 @@ Startup Disk Creator in Ubuntu.
 The file must be included in the folder /EFI/BOOT  
 -3- Turn on the tablet and disable the "Secure Boot" option into the UEFI menu (without inserting the usb stick yet) and reboot.  
 -4- Insert the usb stick and turn on the tablet. The Ubuntu menu will appear. Boot into the Live Sesion and install Ubuntu. I have partitioned the disk as follows: 100 mb for /boot (EFI), 20 Gb for root (Ext4), 1 Gb for swap and the rest for /home (Ext4). Reboot.  
-
+  
+  
 ## First boot
 -5- The first time the machine is not able to boot directly into the installed system. Boot the machine with the USB storage 
 medium plugged in and hit "c" when the menu appears, starting a grub shell.  
@@ -44,7 +46,8 @@ And press tab. A list of devices must appear in the screen. Take note of the UUI
    boot
 ```
 -9- At this time, if you have writed correctly the code above (is usual to make a typo) the system must boot.  
-
+  
+  
 ## Installing the 32-bit Grub
 -10- Connect the machine to an ethernet connection. I used my cell phone and works fine.  
 -11- Update the repositories and install git  
@@ -56,8 +59,9 @@ And press tab. A list of devices must appear in the screen. Take note of the UUI
 ```
 
 If you got problems to install the grub, you can download a version in https://launchpad.net/ubuntu/xenial/amd64/grub-efi-ia32-bin/2.02~beta2-36ubuntu3
-  Click on the downloaded file and install (or via sudo dpkg -i PATH_TO_THE_FILE), and then type "sudo update-grub" and enter.
-
+Click on the downloaded file and install (or via sudo dpkg -i PATH_TO_THE_FILE), and then type "sudo update-grub" and hit enter.
+  
+  
 ## Installing the wifi driver  
 
 ```{bash}
@@ -71,32 +75,33 @@ modprobe r8723bs
 ```
   
 ## Upgrade the system and correct the freezing problem
-First upgrade the system
+First upgrade the system  
 
 ```{bash}
    sudo apt-get upgrade
 ```
 
 The system tends to freezes ocasionally. To correct this problem, a solution that work for my was changing a line
-in the grub file. Type in the console:
+in the grub file. Type in the console:  
 
 ```{bash}
    sudo nano /etc/default/grub
 ```
 
-And change the line:
+And change the line:  
 
 ```
    GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
 ```
 
-to
+to  
 
 ```
    GRUB_CMDLINE_LINUX_DEFAULT="quiet splash intel_idle.max_cstate=1"
 ```
 
-Update the grub and reboot:
+Update the grub and reboot:  
+
 ```{bash}
    sudo update-grub
    sudo reboot
