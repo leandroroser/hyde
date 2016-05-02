@@ -9,8 +9,7 @@ based OS, but it was not so easy. I have formatted the hard disk (because I am n
 and followed several tutorials for other similar machines.  I have tested several distributions as Ubuntu 14.04, 
 Ubuntu 15.10, Fedora, Linux Mint and inclusive Android or Remix OS, but some were unstable and other had a poor performance and 
 driver support, or both. The best solution comes with the new release of Ubuntu, and althought some characteristics are not working,
-it is "usable". The following steps give me at the moment the best result. At the moment I can not get to work the screen in touch
-mode and the screen rotation, the sound or the power settings.
+it is "usable". The following steps give me at the moment the best result. At the moment I can not get to work the screen in touch mode and the screen rotation, the sound or the power settings.
 
 Requirements:
 * An USB storage medium
@@ -32,7 +31,9 @@ medium plugged in and hit "c" when the menu appears, starting a grub shell.
 6. Probably the keyboard will type some numbers instead of letters for the half of the keys. This is dissabled by pressing 
 "Fn + Ins".
 7. Type:
+```{bash}
    linux (hd1,
+```
 And press tab. A list of devices must appear in the screen. Take note of the UUID number of the root partition, usually hd1,gpt2 (you will recognize it for the Ext file system).
 8. Now type:
     linux (hd1,gpt2)/boot/vmlinuz-4.4.0-21-generic.efi.signed root=UUID=YOUR_NUMBER_OF_UUID reboot=pci,force
