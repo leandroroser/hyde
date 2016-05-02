@@ -15,15 +15,14 @@ Requirements:
 ## Installing Ubuntu
 1. Create a bootable image of Ubuntu 16.04 in Windows with Rufus (https://rufus.akeo.ie/) or with the  
 Startup Disk Creator in Ubuntu.
-2. As the machine has a 64 bits architecture but the UEFI is of 32 bits (!), the file bootia32.efi. A copy can be obtained from the command line with:
+2. As the machine has a 64-bits architecture but a 32-bits UEFI (!), a trick must be made. A copy of the 32-bit loader *bootia32.efi* can be obtained from the command line with:
  
 ```{bash}
    git clone https://github.com/leandroroser/leandroroser.github.io/blob/master/public/bootia32.efi
 ```
 The file must be included in the folder /EFI/BOOT
-3. Disable the "Secure Boot" option into the UEFI menu.  
-4. Boot into the Live Sesion from the USB stick and install Ubuntu. I have partitioned the disk as follows: 100 mb for /boot (EFI), 20 Gb for root (Ext4)
-1 Gb for swap and the rest for /home (Ext4). Reboot.
+3. Turn on the tablet and disable the "Secure Boot" option into the UEFI menu (without inserting the usb stick yet) and reboot.  
+4. Insert the usb stick and turn on the tablet. The Ubuntu menu will appear. Boot into the Live Sesion and install Ubuntu. I have partitioned the disk as follows: 100 mb for /boot (EFI), 20 Gb for root (Ext4), 1 Gb for swap and the rest for /home (Ext4). Reboot.
 
 ## First boot
 5. The first time the machine is not able to boot directly into the installed system. Boot the machine with the USB storage 
