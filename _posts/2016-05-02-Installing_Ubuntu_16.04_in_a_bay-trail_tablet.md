@@ -3,7 +3,7 @@ layout:
 title: Installing Ubuntu 16.04 in a bay-trail tablet
 ---
 
-A month ago I have bought an Exo W1025  "2 in 1" tablet, that can be obtained here in Argentina. It has a processor Intel Atom Z3735F, 2Gb of RAM memory, 32 Gb of hard drive, and includes Windows 10.1 preinstalled. My objective was to install a GNU-Linux based OS, but it was not so easy. I have formatted the hard disk (because I am not a Windows user and there are only 32 Gb of HD available) and followed a couple of tutorials for other similar machines.  I have tested several distributions as Ubuntu 14.04, Ubuntu 15.10, Fedora, Linux Mint and even Android or Remix OS, but some were unstable and other had a poor performance and/or apoor driver support. The best solution comes with the new release of Ubuntu, and althought some characteristics are not working yet, it is still "usable". The following steps gave me the best result. At the moment there is no support for the screen in touch mode, the screen rotation and the sound; the power settings also have problems, because the machine do not charge when it is on and is not detecting the actual battery charge level.
+A month ago I have bought an Exo W1025  "2 in 1" tablet, that can be obtained here in Argentina. It has a processor Intel Atom Z3735F, 2Gb of RAM memory, 32 Gb of hard drive, and includes Windows 10.1 preinstalled. My objective was to install a GNU-Linux based OS, but it was not so easy. I have formatted the hard disk (because I am not a Windows user and there are only 32 Gb of HD available) and followed a couple of tutorials for other similar machines.  I have tested several distributions as Ubuntu 14.04, Ubuntu 15.10, Fedora, Linux Mint and even Android or Remix OS, but some were unstable and other had a poor performance and/or a poor driver support. The best solution comes with the new release of Ubuntu, and althought some characteristics are not working yet, it is still "usable". The following steps gave me the best result. At the moment there is no support for the screen in touch mode, the screen rotation and the sound; the power settings also have problems, because the machine do not charge when it is on and is not detecting the actual battery charge level.
 
 ## Requirements
 
@@ -23,13 +23,13 @@ Startup Disk Creator in Ubuntu.
 
 The file must be included in the folder /EFI/BOOT  
 -3- Turn on the tablet and disable the "Secure Boot" option into the UEFI menu (without inserting the usb stick yet) and reboot.  
--4- Insert the usb stick and turn on the tablet. The Ubuntu menu will appear. Boot into the Live Sesion and install Ubuntu. I have partitioned the disk as follows: 100 mb for /boot (EFI), 20 Gb for root (Ext4), 1 Gb for swap and the rest for /home (Ext4). Reboot.  
+-4- Insert the usb stick and turn on the tablet. The Ubuntu menu will appear. Boot into the Live Sesion and install Ubuntu. I have manually partitioned the disk as follows: 100 mb for /boot (EFI), 20 Gb for root (Ext4), 1 Gb for swap and the rest for /home (Ext4). Reboot.  
   
   
 ## First boot
 -5- The first time the machine is not able to boot directly into the installed system. Boot the machine with the USB storage 
 medium plugged in and hit "c" when the menu appears, starting a grub shell.  
--6- Probably the keyboard will type some numbers instead of letters for the half of the keys. This is dissabled by pressing 
+-6- Probably the keyboard will type some numbers instead of letters. This feature is dissabled by pressing 
 "Fn + Ins".  
 -7- Type:  
 
@@ -44,7 +44,7 @@ And press tab. A list of devices must appear in the screen. Take note of the UUI
  initrd (hd1,gpt2)/boot/initrd-4.4.0-21-generic
  boot
 ```
--9- At this time, if you have writed correctly the code above (is usual to make a typo) the system must boot.  
+-9- At this time, if you have writed correctly the code above, the system must boot.  
   
   
 ## Installing the 32-bit Grub
