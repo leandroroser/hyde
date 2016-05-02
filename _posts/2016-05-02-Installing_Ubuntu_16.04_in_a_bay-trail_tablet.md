@@ -19,7 +19,7 @@ Startup Disk Creator in Ubuntu.
 -2- As the machine has a 64-bits architecture but a 32-bits UEFI (!), a trick must be made. A copy of the 32-bit loader *bootia32.efi* can be obtained from the command line with:
  
 ```{bash}
-git clone https://github.com/leandroroser/leandroroser.github.io/blob/master/public/bootia32.efi
+   git clone https://github.com/leandroroser/leandroroser.github.io/blob/master/public/bootia32.efi
 ```
 
 The file must be included in the folder /EFI/BOOT  
@@ -65,13 +65,13 @@ Click on the downloaded file and install (or via sudo dpkg -i PATH_TO_THE_FILE),
 ## Installing the wifi driver  
 
 ```{bash}
-sudo apt-get install git
-git clone https://github.com/hadess/rtl8723bs
-cd rtl8723bs
-sudo make
-sudo make install
-depmod -a
-modprobe r8723bs
+   sudo apt-get install git
+   git clone https://github.com/hadess/rtl8723bs
+   cd rtl8723bs
+   sudo make
+   sudo make install
+   depmod -a
+   modprobe r8723bs
 ```
   
 ## Upgrading the system and correcting the freezing problem
