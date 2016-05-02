@@ -3,7 +3,7 @@ layout:
 title: Installing Ubuntu 16.04 in a bay-trail tablet
 ---
 
-A month ago I have bought a 2 in 1 tablet that can be obtained here in Argentina. It has a processor Intel Atom CPU Z3735F, 
+A month ago I have bought a "2 in 1" tablet that can be obtained here in Argentina. It has a processor Intel Atom CPU Z3735F, 
 2Gb of RAM memory, 32 Gb of hard drive, and includes Windows 10.1 preinstalled. My objective was to install a GNU-Linux 
 based OS, but it was not so easy. I have formatted the hard disk (because I am not a Windows user and there are only 32 Gb of HD available) and followed several tutorials for other similar machines.  I have tested several distributions as Ubuntu 14.04, Ubuntu 15.10, Fedora, Linux Mint and even Android or Remix OS, but some were unstable and other had a poor performance and/or
 poor driver support. The best solution comes with the new release of Ubuntu, and althought some characteristics are not working, it is "usable". The following steps give me the best result. At the moment I have not support for the screen in touch mode, the screen rotation and the sound; the power settings also have problems, because the machine do not charge when it is on and do not detect the battery charge level.
