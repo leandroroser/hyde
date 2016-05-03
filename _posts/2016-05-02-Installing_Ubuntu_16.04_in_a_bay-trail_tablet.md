@@ -15,9 +15,10 @@ A month ago I have bought an Exo W1025  "2 in 1" tablet, that can be obtained he
 ## Installing Ubuntu
 -1- Create a bootable image of Ubuntu 16.04 in Windows with Rufus (https://rufus.akeo.ie/) or with the  
 Startup Disk Creator in Ubuntu.  
--2- As the machine has a 64-bits architecture but a 32-bits UEFI (!), a trick must be made. A copy of the 32-bit loader *bootia32.efi* can be obtained from the command line with:
+-2- As the machine has a 64-bits architecture but a 32-bits UEFI (!), a trick must be made. Install git and get a copy of the 32-bit loader *bootia32.efi*:
  
 ```{bash}
+ sudo apt-get install git
  git clone https://github.com/leandroroser/leandroroser.github.io/blob/master/public/bootia32.efi
 ```
 
@@ -49,7 +50,7 @@ And press tab. A list of devices must appear in the screen. Take note of the UUI
   
 ## Installing the 32-bit Grub
 -10- Connect the machine to an ethernet connection. I used my cell phone and works fine.  
--11- Update the repositories and install git  
+-11- Update the repositories and install the 32-bits Grub
 
 ```{bash}
  sudo apt-get update
