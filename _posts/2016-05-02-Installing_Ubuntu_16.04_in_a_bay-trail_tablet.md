@@ -45,7 +45,7 @@ And press tab. A list of devices must appear in the screen. Take note of the UUI
  initrd (hd1,gpt2)/boot/initrd-4.4.0-21-generic
  boot
 ```
--9- At this time, if you have writed correctly the code above, the system must boot.  
+-9- At this time, if you have written correctly the code above, the system must boot.  
   
   
 ## Installing the 32-bit Grub
