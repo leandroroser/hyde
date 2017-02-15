@@ -6,9 +6,9 @@ rouge:            pygments
 permalink:        pretty
 
 # Setup
-title:            '#Hello World'
+title:            'L. Roser site'
 tagline:          
-description:      '<br> Lenguage games in <a href="http://jekyllrb.com" target="_blank">R flavors. </a>'
+description:      ''
 url:              http://leandroroser.github.io
 baseurl:          /
 
