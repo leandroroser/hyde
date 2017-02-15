@@ -6,7 +6,7 @@ rouge:            pygments
 permalink:        pretty
 
 # Setup
-title:            'L. Roser site'
+title:            ''
 tagline:          
 description:      ''
 url:              http://leandroroser.github.io
