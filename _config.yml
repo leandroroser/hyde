@@ -22,3 +22,5 @@ paginate:         5
 
 github:
   repo:           https://github.com/leandroroser
+
+theme: jekyll-theme-minimal
